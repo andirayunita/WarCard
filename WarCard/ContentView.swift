@@ -3,25 +3,34 @@
 //  WarCard
 //
 //  Created by Andira Yunita on 14/08/21.
-//  Lesson 3. CWC
+//  Lesson 4. CWC
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         
-        Text("Hello, Andira!")
-            //green background
-            .padding(.all)
-            .background(Color.green)
-            .cornerRadius(10.0)
-            .foregroundColor(.white)
-                    
-                //blue background
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10.0)
+        VStack {
             
+            Spacer()
+            
+            Image("logo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            Spacer()
+            
+            HStack(spacing: 20.0) {
+                Spacer()
+                Text("Hello!")
+                Text("Andira!")
+                Spacer()
+            }
+            
+            Spacer()
+            
+        }
+    
     }
 }
 
