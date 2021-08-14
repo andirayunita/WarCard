@@ -3,63 +3,65 @@
 //  WarCard
 //
 //  Created by Andira Yunita on 14/08/21.
-//  Lesson 4. CWC
+//  Lesson 5. CWC
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         
-        VStack {
+        ZStack {
             
-            Spacer()
+            Image("background")
+                .ignoresSafeArea()
             
-            ZStack {
-                Image("toronto")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(10.0)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack {
+            
+                Spacer()
+                Image("logo")
+                Spacer()
                 
-                VStack {
-                    Text("CN Tower")
-                        .font(.largeTitle)
-                        .foregroundColor(Color.white)
-                    Text("Toronto")
-                        .font(.caption)
-                        .foregroundColor(Color.white)
-                }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .background(Color.black.opacity(0.8))
-                .cornerRadius(10.0)
-            }
-            
-            Spacer()
-            
-            ZStack {
-                Image("london")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(10.0)
-                
-                VStack(alignment: .center) {
-                    Text("Big Ben")
-                        .font(.largeTitle)
-                        .padding([.top, .leading, .trailing])
-                    
-                    Text("London")
-                        .font(.caption)
-                        .padding([.leading, .bottom, .trailing])
+                HStack{
+                    Spacer()
+                    Image("card3")
+                    Spacer()
+                    Image("card4")
+                    Spacer()
                 }
-                .background(Color.black)
-                .opacity(0.8)
-                .cornerRadius(10.0)
-                .foregroundColor(Color.white)
                 
-            }.padding()
-            
-            
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+                            .foregroundColor(Color.white)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+                            .foregroundColor(Color.white)
+                        Text("0")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    Spacer()
+                }
+                
+                Spacer()
+                
+            }
         }
-    
+        
     }
 }
 
