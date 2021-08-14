@@ -14,21 +14,50 @@ struct ContentView: View {
             
             Spacer()
             
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            
-            Spacer()
-            
-            HStack(spacing: 20.0) {
-                Spacer()
-                Text("Hello!")
-                Text("Andira!")
-                Spacer()
+            ZStack {
+                Image("toronto")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10.0)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
+                VStack {
+                    Text("CN Tower")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Text("Toronto")
+                        .font(.caption)
+                        .foregroundColor(Color.white)
+                }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .background(Color.black.opacity(0.8))
+                .cornerRadius(10.0)
             }
             
             Spacer()
             
+            ZStack {
+                Image("london")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10.0)
+                
+                VStack(alignment: .center) {
+                    Text("Big Ben")
+                        .font(.largeTitle)
+                        .padding([.top, .leading, .trailing])
+                    
+                    Text("London")
+                        .font(.caption)
+                        .padding([.leading, .bottom, .trailing])
+                }
+                .background(Color.black)
+                .opacity(0.8)
+                .cornerRadius(10.0)
+                .foregroundColor(Color.white)
+                
+            }.padding()
+            
+            Spacer()
         }
     
     }
