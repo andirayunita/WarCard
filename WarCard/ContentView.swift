@@ -3,63 +3,37 @@
 //  WarCard
 //
 //  Created by Andira Yunita on 14/08/21.
-//  Lesson 5. CWC
+//  Lesson 10. CWC
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         
-        ZStack {
+        VStack {
             
-            Image("background")
-                .ignoresSafeArea()
+            //Button instance with closure
+            Button("Click Me", action: {
+                print("Hello World")
+            })
             
-            VStack {
             
-                Spacer()
-                Image("logo")
-                Spacer()
-                
-                HStack{
-                    Spacer()
-                    Image("card3")
-                    Spacer()
-                    Image("card4")
-                    Spacer()
-                }
-                
-                Spacer()
-                Image("dealbutton")
-                Spacer()
-                
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Player")
-                            .font(.headline)
-                            .padding(.bottom, 10.0)
-                            .foregroundColor(Color.white)
-                        Text("0")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.white)
-                    }
-                    Spacer()
-                    VStack {
-                        Text("CPU")
-                            .font(.headline)
-                            .padding(.bottom, 10.0)
-                            .foregroundColor(Color.white)
-                        Text("0")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.white)
-                    }
-                    Spacer()
-                }
-                
-                Spacer()
-                
+            //Button instance with trailing closure
+            Button("Click Me") {
+                print("Hello World!")
             }
+            
+            
+            //Button with label view
+            Button(action: {
+                print("Hella World")
+            }, label: {
+                HStack {
+                    Image(systemName: "pencil") //sf symbol from developer.apple.com/sf-symbols
+                    Text("Edit")
+                }
+            })
+            
         }
         
     }
